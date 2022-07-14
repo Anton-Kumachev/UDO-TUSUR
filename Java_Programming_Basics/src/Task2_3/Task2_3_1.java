@@ -24,6 +24,5 @@ public class Task2_3_1 {
         int thirdNum = number % 10;
 
         System.out.println(thirdNum + " " + secondNum + " " + firstNum);
-
     }
 }

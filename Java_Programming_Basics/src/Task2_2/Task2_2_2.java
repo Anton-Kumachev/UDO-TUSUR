@@ -6,15 +6,9 @@ public class Task2_2_2 {
         int number = 30;
 
         if (number % 2 == 0)
-
-            System.out.println
-
-                    (number + " четное");
+            System.out.println(number + " четное");
 
         else if (number % 5 == 0)
-
-            System.out.println
-
-                    (number + " кратно 5");
+            System.out.println(number + " кратно 5");
     }
 }

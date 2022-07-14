@@ -15,6 +15,5 @@ public class Task2_2_10 {
                 System.out.print(k >= m ? m + " ": " " + " ");
                 System.out.println();
         }
-
     }
 }
