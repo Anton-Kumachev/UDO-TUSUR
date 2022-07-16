@@ -28,9 +28,11 @@ public class Task2_3_3 {
 
         if (multiplyNum > sumNum) {
             System.out.println("Произведение цифр числа больше, чем их сумма.");
-        } else {
+        } else if (multiplyNum < sumNum) {
             System.out.println("Сумма цифр числа больше, чем их произведение.");
+        } else if (multiplyNum == sumNum) {
+            System.out.println("Сумма цифр числа равна их произведению.");
         }
-
     }
 }
+
