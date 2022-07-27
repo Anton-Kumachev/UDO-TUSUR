@@ -1,10 +1,10 @@
-package Tasks4_3;
+package Task4_3;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Task4_3_10 {
+public class Task4_3_9 {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         //Создаём список объектов
         List<Student> listStudents = new ArrayList<Student>();
@@ -20,22 +20,23 @@ public class Task4_3_10 {
             System.out.println("Учащийся: " + st);
         }
         System.out.println();
-        System.out.println("СПИСОК УЧАЩИХСЯ ЖЕНСКОГО ПОЛА: ");
+        System.out.println("СПИСОК УЧАЩИХСЯ МУЖСКОГО ПОЛА: ");
 
         //Создаём список студентов мужского пола
         List<Student> listM = new ArrayList<Student>();
-        int countW =0;
+        int countM =0;
         for (int i = 0; i < listStudents.size(); i++) {
-            if (listStudents.get(i).getGender().equals("Ж")) {
+            if (listStudents.get(i).getGender().equals("М")) {
                 listM.add(listStudents.get(i));
-                countW++;
+                countM++;
             }
         }
-        for (Student stW : listM) {
-            System.out.println("Учащаяся женского пола: " + stW);
+
+        for (Student stM : listM) {
+            System.out.println("Учащийся мужского пола: " + stM);
         }
 
-        System.out.println("ВСЕГО: " + countW + " человек женского пола.");
+        System.out.println("ВСЕГО: " + countM + " человек мужского пола.");
     }
 
 //Генерируем случайные имена студентов, используя строчные и прописные буквы русского алфавита

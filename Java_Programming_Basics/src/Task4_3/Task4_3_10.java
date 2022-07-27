@@ -1,10 +1,10 @@
-package Tasks4_3;
+package Task4_3;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Task4_3_6 {
+public class Task4_3_10 {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         //Создаём список объектов
         List<Student> listStudents = new ArrayList<Student>();
@@ -15,9 +15,27 @@ public class Task4_3_6 {
                     random.nextInt(10) + 16, getRandomSex()));
         }
 
+        System.out.println("ОБЩИЙ СПИСОК УЧАЩИХСЯ: ");
         for (Student st : listStudents) {
             System.out.println("Учащийся: " + st);
         }
+        System.out.println();
+        System.out.println("СПИСОК УЧАЩИХСЯ ЖЕНСКОГО ПОЛА: ");
+
+        //Создаём список студентов мужского пола
+        List<Student> listM = new ArrayList<Student>();
+        int countW =0;
+        for (int i = 0; i < listStudents.size(); i++) {
+            if (listStudents.get(i).getGender().equals("Ж")) {
+                listM.add(listStudents.get(i));
+                countW++;
+            }
+        }
+        for (Student stW : listM) {
+            System.out.println("Учащаяся женского пола: " + stW);
+        }
+
+        System.out.println("ВСЕГО: " + countW + " человек женского пола.");
     }
 
 //Генерируем случайные имена студентов, используя строчные и прописные буквы русского алфавита

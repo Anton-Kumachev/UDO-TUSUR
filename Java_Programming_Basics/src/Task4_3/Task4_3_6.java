@@ -1,10 +1,10 @@
-package Tasks4_3;
+package Task4_3;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Task4_3_7 {
+public class Task4_3_6 {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         //Создаём список объектов
         List<Student> listStudents = new ArrayList<Student>();
@@ -18,16 +18,6 @@ public class Task4_3_7 {
         for (Student st : listStudents) {
             System.out.println("Учащийся: " + st);
         }
-
-        //Определяем самого старшего студента(ов)
-        int max = 0;
-
-        for (int i = 0; i < listStudents.size(); i++) {
-            if (max < listStudents.get(i).getAge())
-                max = listStudents.get(i).getAge();
-        }
-
-        System.out.println("Максимальный возраст студента: " + max);
     }
 
 //Генерируем случайные имена студентов, используя строчные и прописные буквы русского алфавита

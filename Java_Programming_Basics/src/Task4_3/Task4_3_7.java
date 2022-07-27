@@ -1,10 +1,10 @@
-package Tasks4_3;
+package Task4_3;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Task4_3_9 {
+public class Task4_3_7 {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         //Создаём список объектов
         List<Student> listStudents = new ArrayList<Student>();
@@ -15,28 +15,19 @@ public class Task4_3_9 {
                     random.nextInt(10) + 16, getRandomSex()));
         }
 
-        System.out.println("ОБЩИЙ СПИСОК УЧАЩИХСЯ: ");
         for (Student st : listStudents) {
             System.out.println("Учащийся: " + st);
         }
-        System.out.println();
-        System.out.println("СПИСОК УЧАЩИХСЯ МУЖСКОГО ПОЛА: ");
 
-        //Создаём список студентов мужского пола
-        List<Student> listM = new ArrayList<Student>();
-        int countM =0;
+        //Определяем самого старшего студента(ов)
+        int max = 0;
+
         for (int i = 0; i < listStudents.size(); i++) {
-            if (listStudents.get(i).getGender().equals("М")) {
-                listM.add(listStudents.get(i));
-                countM++;
-            }
+            if (max < listStudents.get(i).getAge())
+                max = listStudents.get(i).getAge();
         }
 
-        for (Student stM : listM) {
-            System.out.println("Учащийся мужского пола: " + stM);
-        }
-
-        System.out.println("ВСЕГО: " + countM + " человек мужского пола.");
+        System.out.println("Максимальный возраст студента: " + max);
     }
 
 //Генерируем случайные имена студентов, используя строчные и прописные буквы русского алфавита

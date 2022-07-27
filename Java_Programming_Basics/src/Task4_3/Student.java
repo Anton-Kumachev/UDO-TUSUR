@@ -1,4 +1,4 @@
-package Tasks4_3;
+package Task4_3;
 
 public class Student {
     private String name, gender;
